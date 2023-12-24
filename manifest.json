@@ -1,10 +1,10 @@
 {
-	"id": "sync-graph-settings",
-	"name": "Sync Graph Settings",
-	"version": "1.1.0",
+	"id": "spdy999-sync-graph-settings",
+	"name": "Spdy999 Sync Graph Settings",
+	"version": "1.1.1",
 	"minAppVersion": "0.15.0",
-	"description": "This is a plugin for syncing graph settings (Color Groups and Search Filters) to Local Graphs",
-	"author": "xallt",
-	"authorUrl": "github.com/Xallt",
+	"description": "Credit to https://github.com/Xallt",
+	"author": "spdy999",
+	"authorUrl": "github.com/spdy999",
 	"isDesktopOnly": false
 }
