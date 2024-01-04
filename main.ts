@@ -27,6 +27,8 @@ export default class SyncGraphPlugin extends Plugin {
 		const showArrow = graphConfig.showArrow;
 		const showTags = graphConfig.showTags;
 		const showOrphans = graphConfig.showOrphans;
+		const nodeSizeMultiplier = graphConfig.nodeSizeMultiplier;
+		const lineSizeMultiplier = graphConfig.lineSizeMultiplier;
 		this.getLocalGraphLeaves().forEach((leaf) => {
 			this.setSettings(
 				leaf,
@@ -35,6 +37,8 @@ export default class SyncGraphPlugin extends Plugin {
 				showArrow,
 				showTags,
 				showOrphans,
+				nodeSizeMultiplier,
+				lineSizeMultiplier,
 			);
 		});
 	}
@@ -50,6 +54,8 @@ export default class SyncGraphPlugin extends Plugin {
 		showArrow: boolean,
 		showTags: boolean,
 		showOrphans: boolean,
+		nodeSizeMultiplier: number,
+		lineSizeMultiplier: number,
 	) {
 		const viewState = localGraphLeaf.getViewState();
 		viewState.state.options.colorGroups = colorGroups;
@@ -58,6 +64,8 @@ export default class SyncGraphPlugin extends Plugin {
 		viewState.state.options.showTags = showTags;
 		viewState.state.options.showOrphans = showOrphans;
 		viewState.state.options.localInterlinks = true;
+		viewState.state.options.nodeSizeMultiplier = nodeSizeMultiplier;
+		viewState.state.options.lineSizeMultiplier = lineSizeMultiplier;
 		localGraphLeaf.setViewState(viewState);
 	}
 }
